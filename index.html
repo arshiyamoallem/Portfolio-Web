@@ -12,11 +12,13 @@
 
     <!-- Top Navigation Bar -->
     <div class = "topnav">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#">Contact Me</a>
+        <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+        <a href="#extra"><i class="fas fa-briefcase"></i> Extra</a>
+        <a href="#" id="contactBtn" class="nav-item">
+          <i class="fas fa-envelope"></i>
+          <span>Contact Me</span>
         <a href="Arshiya Moallem Resume.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
         <a href="https://linkedin.com/in/arshiyamoallem" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/arshiyamoallem" target="_blank"><i class="fab fa-github"></i></a>
@@ -38,9 +40,13 @@
     <main class="main-content">
         <section id="home" class="card glass-card">
           <div class="card-header">
+            <img src="highschool grad pic photo.jpeg" alt="Arshiya Moallem" class="logo-img">
+            <div class="logo-text">
+                <h1>Arshiya Moallem</h1>
+            </div>
             <h1><span class="text-gradient">Welcome!</span></h1>
             <div class="tech-tags">
-              <span class="tech-tag">C, Java, Python, HTML/CSS, Linux</span>
+              <span class="tech-tag">Knowledge in C, Java, Python, HTML/CSS, Linux</span>
             </div>
           </div>
           <p class="intro-text">
@@ -57,35 +63,36 @@
             <div class="project-grid">
             <div class="project-item">
                 <div class="project-icon">
-                <i class="fas fa-users"></i>
+                    <i class="fas fa-users"></i>
                 </div>
-                <h3>Social Media App (C)</h3>
-                <p class="project-description">A comprehensive social media platform built with linked lists and structs, featuring friend connections, posts, and profile management.</p>
-                <ul class="project-features">
-                <li>Memory management with custom allocators</li>
-                <li>CSV import/export functionality</li>
-                <li>Modular architecture</li>
-                </ul>
-                <a href="https://github.com/arshiyamoallem/social-media-app" target="_blank" class="project-link">
-                View Project <i class="fas fa-external-link-alt"></i>
-                </a>
+                    <h3>Social Media App (C)</h3>
+                    <p class="project-description">A comprehensive social media platform built with linked lists and structs, featuring friend connections, posts, and profile management.</p>
+                    <ul class="project-features">
+                        <li>Memory management with custom allocators</li>
+                        <li>CSV import/export functionality</li>
+                        <li>Modular architecture</li>
+                    </ul>
+                    <a href="https://github.com/arshiyamoallem/social-media-app" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
             </div>
 
             <div class="project-item">
                 <div class="project-icon">
-                <i class="fas fa-gamepad"></i>
+                    <i class="fas fa-gamepad"></i>
                 </div>
                 <h3>Video Game Hub (Python)</h3>
                 <p class="project-description">Console-based game launcher with multiple mini-games including number guessing, quizzes, and rock-paper-scissors.</p>
+                
                 <ul class="project-features">
-                <li>Expandable game architecture</li>
-                <li>Score tracking system</li>
-    
+                    <li>Expandable game architecture</li>
+                    <li>Custom loading animations</li>
+                    <li>Score tracking system</li>
                 </ul>
                 <a href="https://github.com/arshiyamoallem/video-game-hub" target="_blank" class="project-link">
-                View Project <i class="fas fa-external-link-alt"></i>
+                    View Project <i class="fas fa-external-link-alt"></i>
                 </a>
-            </div>
+            </div>   
         </section>
 
         <div>
@@ -99,7 +106,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                 <h3>Bachelor of Engineering in Software Engineering</h3>
-                <p class="timeline-date"> Sept 2023 - Present</p>
+                <p class="timeline-date"> September 2023 - Present</p>
                 <p>Carleton University | Third-year standing</p>
                 <ul class="timeline-skills">
                     <li>Data Structures & Algorithms</li>
@@ -116,28 +123,37 @@
             <p></p>
         </div>
 
-        <section id="experience" class="card glass-card">
-            <h2><span class="text-gradient">Experience</span></h2>
-            <div class="experience-item">
-            <div class="experience-header">
-                <h3>_blank_</h3>
-                <div class="experience-badge">_blank_</div>
-            </div>
-            <p class="experience-date">_blank_</p>
-            <ul class="experience-details">
-                <li>
-                _blank_
-                </li>
-                <li>
-                _blank_
-                </li>
-                <li>
-                _blank_
-                </li>
-            </ul>
-            </div>
+        <section id="extra" class="card glass-card">
+            <h2><span class="text-gradient">extra</span></h2>
+
         </section>
     </main>
+
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content glass-card" style="position: absolute;">
+        <span class="close-btn">&times;</span>
+        <h3><span class="text-gradient">Contact Me</span></h3>
+        <form action="https://formspree.io/f/myzjdzoy" method="POST">
+            <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+            <input type="email" name="email" placeholder="Your Email" required />
+            <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <i class="fas fa-comment"></i>
+            </div>
+            <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
