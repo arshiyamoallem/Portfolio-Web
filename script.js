@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let dragOffsetX = 0;
   let dragOffsetY = 0;
 
-  draggableContainer.style.position = 'absolute';
   draggableContainer.style.top = '100px';
   draggableContainer.style.left = '20px';
   draggableContainer.style.cursor = 'grab';

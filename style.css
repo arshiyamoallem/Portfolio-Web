@@ -1,3 +1,14 @@
+/* === Modern Pastel Sidebar Portfolio Theme === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap');
+
+/* TODO:
+1)Also make sure names are correct and not confusing
+2)make education and experience section look visably appealing like a timeline
+3)get a non-white and gradiant background
+4)make project section have a box that is mostly a picture and a title with a small description
+5)get a new photo
+*/
+
 :root {
     --text-color: black;
     --base-color: #ffffff;
@@ -20,14 +31,14 @@ body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    user-select: none;
-    
-    transition: background-color 0.5s ease, color 0.5s ease;
-
     display: flex;
     flex-direction: column;
     min-height: 100vh;   /* Fill viewport height */
     overflow-x: hidden;  /* Prevent horizontal scroll */  
+}
+
+html, body, p, h1, h2, h3, ul, li {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 section {
@@ -55,6 +66,31 @@ section {
 h1 {
     margin-bottom: 50px;
     color: var(--text-color);
+    font-size: 2.5em;
+}
+
+h2 {
+  padding-left: 20px;  
+  height: 180px;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--text-color);
+  padding-left: 20px;  
+}
+
+h2, p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+p {
+    max-width: 18.5cm;
+    line-height: 1.5cm;
+    font-size: 1.5em;
 }
 
 .home {
@@ -191,6 +227,64 @@ h1 {
   color: #1a4a8a;
   text-decoration: underline;
 }
+
+/* HEXAGON SECTION FOR SKILLS */
+
+.image-gallery-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.image-gallery-container ul {
+  list-style: none;
+  display: table;
+  margin: auto; 
+}
+
+.image-gallery-container ul:not(:first-child) {
+  margin-top: -70px;
+}
+
+.image-gallery-container ul li {
+  float: left;
+}
+
+/* Outer hex with black border effect */
+.hex-border {
+  width: 125px;
+  height: 145px;
+  background: black; /* border color */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hex-border:hover .bg-image {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.bg-image {
+  width: 110px;
+  height: 130px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  transition: transform 0.3s ease;
+  clip-path: inherit;
+  -webkit-clip-path: inherit;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.darkmode .bg-image {
+  background-color: var(--base-variant);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
 
 /* === FOOTER === */
 .footer {
@@ -406,4 +500,12 @@ body {
 
 .zoom-controls button:hover {
   background: #ddd;
+}
+/* MOBILE CONTENT */
+
+@media (max-width: 600px) {
+  h2 {
+    padding-left: 20px;
+    font-size: 1.5em;
+  }
 }
