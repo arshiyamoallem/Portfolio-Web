@@ -1,14 +1,3 @@
-/* === Modern Pastel Sidebar Portfolio Theme === */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap');
-
-/* TODO:
-1)Also make sure names are correct and not confusing
-2)make education and experience section look visably appealing like a timeline
-3)get a non-white and gradiant background
-4)make project section have a box that is mostly a picture and a title with a small description
-5)get a new photo
-*/
-
 :root {
     --text-color: black;
     --base-color: #ffffff;
