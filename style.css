@@ -677,25 +677,29 @@ p {
 
   /* === TIMELINE === */
   .timeline::after {
-    left: 31px;
+    left: 20px; /* thinner or smaller center line */
   }
 
   .timeline-container {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 50px;
+    padding-right: 20px;
+    margin-bottom: 30px;
   }
 
   .timeline-container::after {
-    left: 15px;
+    left: 0px;
   }
 
+  .left,
   .right {
-    left: 0%;
+    left: 0;
+    right: 0;
   }
 
   .content {
-    padding: 20px;
+    margin-left: 10px;
+    padding: 16px;
   }
 
   /* === HEXAGON GRID - 3 PER ROW === */
