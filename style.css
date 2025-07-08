@@ -66,13 +66,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.8em;
   text-align: center;
-  color: var(--text-color);
-  padding-left: 20px;  
+  color: var(--text-color); 
 }
 
-h2, p {
+h2, p, a {
     margin-bottom: 20px;
     color: var(--text-color);
 }
@@ -283,6 +282,18 @@ p {
 .darkmode .bg-image {
   background-color: var(--base-variant);
   transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#skills-prog-names {
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--text-color);
+  padding-left: 40px;  
+}
+
+#skills-prog-image {
+
+  padding-left: 20px;  
 }
 
 /* === FOOTER === */
@@ -612,4 +623,109 @@ p {
   .right {
     left: 0%;
   }
+
+  /* General layout adjustments */
+  body {
+    font-size: 90%;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 40px 10px;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    max-width: 100%;
+  }
+
+  /* Skills grid - center and stack items */
+  .skills-grid {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-gallery-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .image-gallery-container ul li {
+    float: none;
+    margin: 10px;
+  }
+
+  .hex-border {
+    width: 90px;
+    height: 105px;
+  }
+
+  .bg-image {
+    width: 80px;
+    height: 95px;
+  }
+
+  /* Navbar: stack or allow wrap if needed */
+  .topnav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .topnav a {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  /* Timeline section (already mostly responsive) */
+  .timeline-container {
+    padding: 20px 20px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .project-grid {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .project-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-item h3 {
+    white-space: normal;
+  }
+  .image-gallery-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px; /* space between hexes */
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.image-gallery-container ul li {
+  list-style: none;
+  width: 30%;  /* approx 3 per row with gap */
+  max-width: 110px;
+  display: flex;
+  justify-content: center;
+}
+
 }
