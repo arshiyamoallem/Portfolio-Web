@@ -609,8 +609,73 @@ p {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Responsive Timeline */
 @media screen and (max-width: 768px) {
+
+  /* Remove horizontal scrolling */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-size: 90%;
+  }
+
+  section {
+    padding: 40px 10px;
+    min-height: auto;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    font-size: 1.6em;
+    padding-left: 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* === NAVIGATION FIX === */
+  .topnav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .topnav a {
+    font-size: 1em;
+    padding: 10px 14px;
+    white-space: nowrap;
+  }
+
+  .nav-right {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* === PROJECT SECTION === */
+  .project-grid {
+    padding: 0 10px;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .project-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-item h3 {
+    white-space: normal;
+  }
+
+  /* === TIMELINE === */
   .timeline::after {
     left: 31px;
   }
@@ -629,28 +694,40 @@ p {
     left: 0%;
   }
 
-  /* General layout adjustments */
-  body {
-    font-size: 90%;
-    padding: 0 10px;
+  .content {
+    padding: 20px;
   }
 
-  section {
-    padding: 40px 10px;
+  /* === HEXAGON GRID - 3 PER ROW === */
+  .image-gallery-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
   }
 
-  h1, h2, h3 {
-    text-align: center;
-    font-size: 1.5em;
+  .image-gallery-container ul li {
+    width: 30%;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    float: none !important; /* Override float for flex layout */
+    margin: 5px;
   }
 
-  p {
-    font-size: 1.2em;
-    line-height: 1.6em;
-    max-width: 100%;
+  .hex-border {
+    width: 90px;
+    height: 105px;
   }
 
-  /* Skills grid - center and stack items */
+  .bg-image {
+    width: 80px;
+    height: 95px;
+  }
+
+  /* === SKILLS GRID === */
   .skills-grid {
     width: 100%;
     padding: 0 10px;
@@ -659,88 +736,9 @@ p {
     align-items: center;
   }
 
-  .image-gallery-container ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 0;
+  /* === FOOTER === */
+  .footer {
+    font-size: 0.9em;
+    padding: 1.5rem 1rem;
   }
-
-  .image-gallery-container ul li {
-    float: none;
-    margin: 10px;
-  }
-
-  .hex-border {
-    width: 90px;
-    height: 105px;
-  }
-
-  .bg-image {
-    width: 80px;
-    height: 95px;
-  }
-
-  /* Navbar: stack or allow wrap if needed */
-  .topnav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px;
-    justify-content: center;
-  }
-
-  .topnav a {
-    font-size: 1em;
-    padding: 10px;
-  }
-
-  /* Timeline section (already mostly responsive) */
-  .timeline-container {
-    padding: 20px 20px;
-  }
-
-  .content {
-    right: -10px;
-    padding: 20px;
-  }
-
-  .project-grid {
-    padding: 0 10px;
-    gap: 20px;
-  }
-
-  .project-item {
-    width: 100%;
-    height: auto;
-  }
-
-  .project-item h3 {
-    white-space: normal;
-  }
-  
-  .image-gallery-container ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 0;
-  }
-
-  .image-gallery-container ul li {
-    width: 30%;
-    max-width: 100px;
-    display: flex;
-    justify-content: center;
-  }
-
-  .hex-border {
-    width: 90px;
-    height: 105px;
-  }
-
-  .bg-image {
-    width: 80px;
-    height: 95px;
-  }
-
 }
