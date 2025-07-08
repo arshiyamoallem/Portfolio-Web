@@ -571,12 +571,21 @@ p {
 
 .content {
   text-align: left;
-  padding: 20px 20px;
+  padding: 20px 30px;
   background-color: var(--background-color-box-timeline);
   position: relative;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.content p {
+  font-size: 1.2em;
+  line-height: 2.5em;
 }
 
 .darkmode .content {
