@@ -10,6 +10,11 @@
     --background-color-box-timeline: #a5a6a3;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html { 
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
@@ -23,8 +28,7 @@ body {
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    min-height: 220vh;   /* Fill viewport height */
-    overflow-x: hidden;  /* Prevent horizontal scroll */  
+    min-height: 220vh;   /* Fill viewport height */ 
 }
 
 html, body, p, h1, h2, h3, ul, li {
@@ -587,6 +591,7 @@ p {
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   transition: background-color 0.3s ease, color 0.3s ease;
+  right: -10px;
 }
 
 .content h3 {
@@ -711,21 +716,30 @@ p {
   .project-item h3 {
     white-space: normal;
   }
+  
   .image-gallery-container ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px; /* space between hexes */
-  padding-left: 0;
-  margin: 0 auto;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
 
-.image-gallery-container ul li {
-  list-style: none;
-  width: 30%;  /* approx 3 per row with gap */
-  max-width: 110px;
-  display: flex;
-  justify-content: center;
-}
+  .image-gallery-container ul li {
+    width: 30%;
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hex-border {
+    width: 90px;
+    height: 105px;
+  }
+
+  .bg-image {
+    width: 80px;
+    height: 95px;
+  }
 
 }
